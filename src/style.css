@@ -61,19 +61,24 @@ body {
     padding: 5px;
 }
 
+#headline h3{
+    font-size: 1em;
+}
 #featuredContainer {
-    overflow: scroll;
+    display: grid;
 }
 
-#featuredContainer h3 {
-    font-size: 1em;
+#featuredDescription h3 {
+    font-size: 2em;
 }
 
 #featuredItems {
+    width: 100%;
     display: grid;
     gap: 5px;
-    grid-template-columns: repeat(3,1fr);
-    
+    grid-template-columns: repeat(3,340px);
+    justify-content: space-between;
+    overflow: scroll;
 }
 
 #featuredContainer::-webkit-scrollbar {
@@ -91,7 +96,7 @@ body {
     font-size: 1em;
     display: grid;
     place-items: center;
-
+    border-bottom: 1px solid rgb(193, 12, 178);
 }
 
 /* ===== Scrollbar ===== */

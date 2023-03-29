@@ -12,15 +12,18 @@ function loadHome() {
     const headline = document.createElement('div');
     headline.setAttribute('id', 'headline');
     headline.classList.add('contentBox');
-    headline.innerHTML = "Welcome to the Psychadelic Ward <br> <em>Where funky meets functional.</em> <br> Shop from over 15 different beautiful hand crafted keychains that resemble your favorite characters and also function as a jar to keep your important possessions stashed on the go.";
+    headline.innerHTML = "<h3>Welcome to the Psychadelic Ward</h3><br><em>Where funky meets functional.</em> <br> Shop from over 15 different beautiful hand crafted keychains that resemble your favorite characters and also function as a way to keep your important possessions stashed on the go.";
     
     const featuredContainer = document.createElement('div');
     featuredContainer.setAttribute('id', 'featuredContainer');
     featuredContainer.classList.add('contentBox');
-    featuredContainer.innerHTML = '<h3>Featured Items</h3>';
+    const featuredDescription = document.createElement('div');
+    featuredDescription.setAttribute('id', 'featuredDescription');
+    featuredDescription.innerHTML = '<h3>Featured Items</h3>';
 
     const featuredItems = document.createElement('div');
     featuredItems.setAttribute('id', 'featuredItems');
+    featuredContainer.append(featuredDescription);
     featuredContainer.appendChild(featuredItems);
  
     const chowder = new Image();

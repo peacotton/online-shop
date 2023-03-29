@@ -34,19 +34,18 @@ function loadShop(){
          return image;
     }
 
-    shopGrid(chowderThumbnail, '<h1>Chowder Keychain</h1><br>$65');
-    shopGrid(kuchiThumbnail, '<h1>Kuchi Keychain</h1><br>$45');
-    shopGrid(finnThumbnail, '<h1>Finn Keychain</h1><br>$45');
-    shopGrid(jake, '<h1>Jake Keychain</h1><br>$40');
-    shopGrid(garfield, '<h1>Garfield Keychain</h1><br>$60');
-    shopGrid(schnitzel, '<h1>Schnitzel Figurine</h1><br>$70');
-    shopGrid(puppycat, '<h1>Puppycat Keychain</h1><br>$45');
+    shopGrid(chowderThumbnail, '<h1>Chowder Keychain</h1>$65');
+    shopGrid(kuchiThumbnail, '<h1>Kuchi Keychain</h1>$45');
+    shopGrid(finnThumbnail, '<h1>Finn Keychain</h1>$45');
+    shopGrid(jake, '<h1>Jake Keychain</h1>$40');
+    shopGrid(garfield, '<h1>Garfield Keychain</h1>$60');
+    shopGrid(schnitzel, '<h1>Schnitzel Figurine</h1>$70');
+    shopGrid(puppycat, '<h1>Puppycat Keychain</h1>$45');
 
     const body = document.getElementById('body');
     body.textContent = '';
     body.appendChild(title);
     body.appendChild(shop);
-    console.log('imported from shop.js!');
 }
 
 export default loadShop;
