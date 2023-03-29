@@ -8,6 +8,7 @@
 
 body {
     background-image:url(./img/background.jpg);
+    background-attachment: fixed;
 }
 
 .contentBox {
@@ -34,10 +35,14 @@ body {
     height: 5vh;
 }
 
-#nav button {
+button {
     width: 100%;
     background-color: rgb(16, 229, 197);
 }
+
+#nav .active {
+    background-color: rgb(9, 151, 151);
+}   
 
 #title {
     font-size: 5em; 
@@ -50,11 +55,14 @@ body {
     margin-left: 10vw;
     margin-right: 10vw;
     gap: 50px;
+    background: none;
 }
 
 #body {
     display: grid;
     gap: 50px;
+    background: none;
+    box-shadow: none;
 }
 
 #headline {
