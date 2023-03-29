@@ -22,7 +22,7 @@ function loadHome() {
     const featuredItems = document.createElement('div');
     featuredItems.setAttribute('id', 'featuredItems');
     featuredContainer.appendChild(featuredItems);
-
+ 
     const chowder = new Image();
     chowder.src = chowderThumbnail;
     const kuchi = new Image();
@@ -35,8 +35,8 @@ function loadHome() {
     featuredItems.appendChild(finn);
     
     const content = document.getElementById('content');
-    const body = document.createElement('div');
-    body.setAttribute('id', 'body');   
+    const body = document.getElementById('body');
+    body.textContent = '';   
     content.appendChild(body);
     body.appendChild(title);
     body.appendChild(headline);

@@ -56,6 +56,7 @@ body {
     display: grid;
     gap: 50px;
 }
+
 #headline {
     padding: 5px;
 }
@@ -78,6 +79,19 @@ body {
 #featuredContainer::-webkit-scrollbar {
     width: 10px;
     height: 10px;
+}
+
+#shop {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.itemDescription {
+    font-size: 1em;
+    display: grid;
+    place-items: center;
+
 }
 
 /* ===== Scrollbar ===== */

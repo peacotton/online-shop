@@ -7,15 +7,15 @@ function createSite() {
     nav.setAttribute('id', 'nav');
 
     const homeButton = document.createElement('button');
-    homeButton.setAttribute('id', 'home');
+    homeButton.setAttribute('id', 'homeButton');
     homeButton.textContent = 'home';
     homeButton.addEventListener('click', loadHome);
     const shopButton = document.createElement('button');
-    shopButton.setAttribute('id', 'shop');
+    shopButton.setAttribute('id', 'shopButton');
     shopButton.textContent = 'shop';
     shopButton.addEventListener('click', loadShop);
     const aboutButton = document.createElement('button');
-    aboutButton.setAttribute('id', 'about');
+    aboutButton.setAttribute('id', 'aboutButton');
     aboutButton.textContent = 'about';
     aboutButton.addEventListener('click', loadAbout);
 
@@ -24,8 +24,11 @@ function createSite() {
     nav.appendChild(aboutButton);
 
     
-    const content = document.getElementById('content');   
-    content.appendChild(nav); 
+    const content = document.getElementById('content');
+    const body = document.createElement('body');
+    body.setAttribute('id', 'body');  
+    content.appendChild(nav);
+    content.appendChild(body);
     loadHome();   
 }
 
