@@ -20,13 +20,13 @@ body {
     padding: 10px;
 }
 
-.contentBox h1 {
+.contentBox p,
+.contentBox h1,
+.contentBox em,
+.contentBox a {
     font-size: 1em;
 }
 
-.contentBox em {
-    font-size: 1em;
-}
 
 #nav {
     display: grid;
@@ -63,6 +63,7 @@ button {
     gap: 50px;
     background: none;
     box-shadow: none;
+    justify-items: center;
 }
 
 #headline {
@@ -72,26 +73,12 @@ button {
 #headline h3{
     font-size: 1em;
 }
-#featuredContainer {
-    display: grid;
-}
 
+#featuredContainer {
+    width: 500px;
+}
 #featuredDescription h3 {
     font-size: 2em;
-}
-
-#featuredItems {
-    width: 100%;
-    display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(3,340px);
-    justify-content: space-between;
-    overflow: scroll;
-}
-
-#featuredContainer::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
 }
 
 #shop {
@@ -105,6 +92,34 @@ button {
     display: grid;
     place-items: center;
     border-bottom: 1px solid rgb(193, 12, 178);
+}
+
+#carousel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 370px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#pictureFrame {
+    width: 370px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#carousel button {
+    height: 50px;
+    border: 2px solid rgb(193, 12, 178);
+}
+
+#picture {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    position: relative;
+    transition: transform 300ms ease-in-out;
 }
 
 /* ===== Scrollbar ===== */
