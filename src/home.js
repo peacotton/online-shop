@@ -33,6 +33,27 @@ function loadHome() {
     body.appendChild(featuredContainer);
 
     let currentPicture = 0;
+    let myTimeout = setTimeout(nextPicture, 5000);
+
+    function nextPicture() {
+        currentPicture += 1;
+        if (currentPicture > 4) {
+            currentPicture = 0;
+        }
+        picture.style.transform = `translate(${currentPicture * -355}px)`;
+        clearTimeout(myTimeout);
+        myTimeout = setTimeout(nextPicture, 5000);
+    }
+
+    function previousPicture() {
+        currentPicture -= 1;
+        if (currentPicture < 0) {
+            currentPicture = 4;
+        }
+        picture.style.transform = `translate(${currentPicture * -355}px)`;
+        clearTimeout(myTimeout);
+        myTimeout = setTimeout(nextPicture, 5000);
+    }
     const carousel = document.createElement('div');
     carousel.setAttribute('id', 'carousel');
     const pictureFrame = document.createElement('div');
@@ -42,25 +63,27 @@ function loadHome() {
     previousButton.setAttribute('id','previousButton');
     previousButton.textContent = '⮕';
     previousButton.style.rotate = '180deg';
-    previousButton.addEventListener('click', () => {
-        currentPicture -= 1;
-        if (currentPicture < 0) {
-            currentPicture = 4;
-        }
-        picture.style.transform = `translate(${currentPicture * -355}px)`;
-    });
+    previousButton.addEventListener('click', previousPicture
+        // () => {
+        // currentPicture -= 1;
+        // if (currentPicture < 0) {
+        //     currentPicture = 4;
+        // }
+        // picture.style.transform = `translate(${currentPicture * -355}px)`;} 
+    );
     carousel.appendChild(previousButton);
     carousel.appendChild(pictureFrame);
     const nextButton = document.createElement('button');
     nextButton.setAttribute('id','nextButton');
     nextButton.textContent = '⮕';
-    nextButton.addEventListener('click', () => {
-        currentPicture += 1;
-        if (currentPicture > 4) {
-            currentPicture = 0;
-        }
-        picture.style.transform = `translate(${currentPicture * -355}px)`;
-    });
+    nextButton.addEventListener('click', nextPicture
+        // () => {
+        // currentPicture += 1;
+        // if (currentPicture > 4) {
+        //     currentPicture = 0;
+        // }
+        // picture.style.transform = `translate(${currentPicture * -355}px)`;}
+    );
     carousel.appendChild(nextButton);
 
     function importImage(img) {
